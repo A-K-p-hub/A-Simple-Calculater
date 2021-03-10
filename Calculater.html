@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculater</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+<Style>
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+Form #num1 {
+Font-size: 30px;
+Padding: 10px;
+Width: 100%;
+Outline: none;
+Background: white;
+Box-sizing: border-box;
+Border: none;
+}
+Form{
+Width: 94%;
+Margin: 0 auto;
+Padding: 0;
+}
+Input:focus{
+Background: #666;
+Color: white;
+}
+Body{
+Margin: 0;
+Font-family: sans serif;
+Padding-top: 3%;
+}
+.number Input {
+Padding: 10px;
+Box-sizing: border-box;
+Font-size: 2em;
+Width: 30vw;
+Border-left: none;
+Border-top: none;
+Outline: none;
+}
+.number {
+Border: 4px solid black;
+Resize: none;
+width: 100%;
+Height: 100%;
+Padding-left: 2px;
+}
+.val span{
+Font-size: 40px;
+Padding-left: 10px;
+}
+.val {
+Border-right: 5px solid #666;
+Border-left: 5px solid #666;
+Border-top: 5px solid #666;
+}
+</Style>
+</head>
+<body>
+<Form id="noor" name="noor">
+<Div class="val">
+ <Input id="num1" disabled type="text"/>
+<Span id="demo"></span>
+</Div>
+<Div class="number">
+<Input type="button" value="1" onclick="noor.num1.value += '1'"/>
+<Input type="button" value="2" onclick="noor.num1.value += '2'"/>
+<Input type="button" value="3" style="Border-right: none;" onclick="noor.num1.value += '3'"/>
+<Input type="button" value="4" onclick="noor.num1.value += '4'"/>
+<Input type="button" value="5" onclick="noor.num1.value += '5'"/>
+<Input type="button" value="6" style="Border-right: none;" onclick="noor.num1.value += '6'"/>
+<Input type="button" value="7" onclick="noor.num1.value += '7'"/>
+<Input type="button" value="8" onclick="noor.num1.value += '8'"/>
+<Input type="button" value="9" style="Border-right: none;" onclick="noor.num1.value += '9'"/>
+<Input type="button" value="0" onclick="noor.num1.value += '0'"/>
+<Input type="button" value="00" onclick="noor.num1.value += '00'"/>
+<Input type="button" value="000" style="Border-right: none;" onclick="noor.num1.value += '000'"/>
+<Input type="button" value="+" onclick="noor.num1.value += '+'"/>
+<Input type="button" value="-" onclick="noor.num1.value += '-'"/>
+<Input type="button" value="*" style="Border-right: none;" onclick="noor.num1.value += '*'"/>
+<Input type="button" value="/" style="Border-bottom: none;" onclick="noor.num1.value += '/'"/>
+<Input type="button" value="CE" style="Border-bottom: none;" onclick="clear_input()"/>
+<input type="Button" value="=" style="Border-right: none; Border-bottom: none;" onclick="v()">
+</Div>
+</Form>
+<script>
+function v(){
+var num1 = document.getElementById("num1").value;
+var v = eval(num1);
+document.getElementById("demo").innerHTML = v;
+}
+function clear_input(){
+    document.getElementById('num1').value = '';
+}
+</script>
+</body>
+</html>
